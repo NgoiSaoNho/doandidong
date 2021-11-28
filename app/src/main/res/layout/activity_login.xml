@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="#D02418"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.LoginActivity">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_marginBottom="40dp"
+            android:id="@+id/txtTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="35sp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:text="Đăng nhập"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginTop="35dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white"
+                android:layout_height="50dp">
+
+                <EditText
+                    android:id="@+id/edtAccount"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textColorHint="@color/white"
+                    android:drawableLeft="@drawable/ic_baseline_person_24"
+                    android:hint="Tên tài khoản"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="15dp"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <EditText
+                    android:inputType="textPassword"
+                    android:id="@+id/txtPass"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/ic_baseline_lock_24"
+                    android:hint="Mật khẩu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            
+            <Button
+                android:id="@+id/btnLogin"
+                android:textColor="@color/text_color"
+                android:text="Đăng nhập"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

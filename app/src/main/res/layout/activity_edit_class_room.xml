@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".UI.EditClassRoomActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contrainToolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <fragment
+            android:id="@+id/fragToolbar"
+            android:name="khang.ngodinh.doandidong.UI.ToolBar.ToolBarCustom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contrainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+        <LinearLayout
+            android:id="@+id/linearAvatar"
+            android:gravity="center_horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <ImageButton
+                android:layout_marginTop="13dp"
+                android:id="@+id/btnImageFoodType"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_group_24"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <EditText
+                    android:id="@+id/edtTitleFoodType"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:hint="Tên lớp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:padding="7dp"
+                android:weightSum="10"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="5"
+                    android:textColor="@color/text_color"
+                    android:background="@drawable/background_button"
+                    android:text="Quay lại"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:textStyle="bold"
+                    android:id="@+id/btnSave"
+                    android:layout_weight="5"
+                    android:textColor="@color/text_color"
+                    android:background="@drawable/background_button"
+                    android:text="Lưu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
